@@ -12,3 +12,24 @@ header {
     text-align: center;
 }
 
+.pressKey{
+    background-color:#ebebeb44;
+}
+.wins{
+    background-color:#ebebeb44;
+}
+.currentWords{
+    background-color:#ebebeb44;
+}
+.numberGuesses{
+    background-color: #ebebeb44;
+}
+.letters{
+    background-color: #ebebeb44;
+}
+.guesses-left{
+    background-color: #ebebeb44;
+}
+.word-blanks{
+    background-color: #ebebeb44;
+}
