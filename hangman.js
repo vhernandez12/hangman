@@ -47,3 +47,22 @@ function winLose() {
         alert('Loser');
     }
 }
+
+// User Guesses 
+document.onkeyup = function(event) {
+
+    userGuesses = event.key;
+    //checking if the letter exist inside of the word
+    if(randWord.indexOf(userGuesses) > -1) {
+
+        for(var i = 0; i < randWord.length; i++) {
+
+            if(randWord[i] === userGuesses)  {
+
+                underScores[i] = userGuesses;
+                console.log(underScores);
+                winCounter++;
+                winLose();
+            }
+        }
+    }
