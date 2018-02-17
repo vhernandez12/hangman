@@ -39,7 +39,6 @@ function winLose() {
     if(winCounter === randWord.length){
         
         alert('Winner Winner, Chicken Dinner');
-        start();
     }
     else if(guessesLeft === 0){
         
@@ -65,7 +64,7 @@ document.onkeyup = function(event) {
         }
     }
     else
-{
+    {
         wrongLetter.push(userGuesses);
         guessesLeft--;
         console.log(wrongLetter);
