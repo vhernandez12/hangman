@@ -18,11 +18,32 @@ var winCounter = 0;
 //function 
 function startGame(){
     //picks random word
-   randWord = wordBank[Math.floor(Math.random() * wordBank.length)];
-   console.log('random Word = ' + randWord);
+        randWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+        console.log('random Word = ' + randWord);
   
-   for (var i = 0; i < randWord.length; i++){
+        for (var i = 0; i < randWord.length; i++){
       
-    underScores.push('_');
-   }
+            underScores.push('_');
+
+    //Printing underscores to screen
+        document.getElementById('word-blanks').textContent = underScores.join(" ");
+        console.log(underScores);
+    //reset
+        wrongLetter = [];
+        guessesLeft = 10;
+
+    //HTML
+        document.getElementById('guesses-left').textContent = guessesLeft;
+
+    }
+}
+function winLose() {
+    if(winCounter === randWord.length){
+        
+        alert('Winner Winner, Chicken Dinner');
+    }
+    else if(guessesLeft === 0){
+        
+        alert('Loser');
+    }
 }
