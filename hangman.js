@@ -1,26 +1,69 @@
 //creates an array that lists all the words for hangman
-var words = ['carrie', 
+var wordBank = ['carrie', 
             'halloween',
              'saw', 
              'exorcist', 
              'cujo',
              'shining'];
+var wins = 0;
+var guessesLeft = 9;
+var underScores = [];
+var randWord;
 
-    //computer chooses word at randmom from array
-var chooseWord () {
-     words[Math.floor(Math.random() * words.length)];
-}
-//empty array
-var answerArray = []; 
-    for (var i = 0; i < chooseWord.length; i++) {
-        answerArray[i] = "_";
+
+//function 
+function startGame(){
+    //picks random word
+   randWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+   
+   for (var i = 0; i < randWord.length; i++) {
+       
+        underScores.push('_');
     }
-var remainingLetters = chooseWord.length;
-
-while (remainingLetters > 0) {
-    // player progress
-    playerProgress (answerArray.join)(" "));
-    //take input from player
-    var guess =
-    //update answerArray and remainingLetters for every correct guess
+    //Printing underscores to screen
+    document.getElementById('word-blanks').textContent = underScores.join(' ');
+    console.log(underScores);
 }
+   
+    //reset
+    wrongLetter = [];
+    guessesLeft = 10;
+
+    //HTML
+ 
+}
+// User Guesses 
+
+document.onkeyup = function(event) {
+
+    userGuesses = event.key;
+//checking if the letter exist insider of the word
+    if(randWord.indexOf(userGuesses) > -1){
+
+        for(var i = 0; i < randWord.length; i++) {
+
+    if(randWord[i] === userGuesses) {
+
+        underScores[i] = userGuesses;
+  
+    }
+        }
+    }
+    else
+    {
+    wrongLetter.push(userGuesses);
+    guessesLeft[""];
+
+    console.log(wrongLetter);
+
+}
+    
+    //computer chooses word at randmom from array
+//Main
+//===========================================================
+
+startGame();
+
+
+
+    
