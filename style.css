@@ -14,9 +14,11 @@ header {
 
 .pressKey{
     background-color:#ebebeb44;
+    float: left;
 }
 .wins{
     background-color:#ebebeb44;
+    float: left;;
 }
 .currentWords{
     background-color:#ebebeb44;
