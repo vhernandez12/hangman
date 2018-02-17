@@ -66,3 +66,15 @@ document.onkeyup = function(event) {
             }
         }
     }
+    else
+    {
+        wrongLetter.push(userGuesses);
+        guessesLeft--;
+        console.log(wrongLetter);
+        winLose();
+    }
+}
+//Main
+//===========================================================
+startGame();
+//
