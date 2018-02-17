@@ -12,6 +12,7 @@ var guessesLeft = 9;
 var underScores = [];
 var userGuesses = [];
 var randWord;
+var winCounter = 0;
 
 
 //function 
@@ -19,39 +20,34 @@ function startGame(){
     //picks random word
    randWord = wordBank[Math.floor(Math.random() * wordBank.length)];
    console.log('random Word = ' + randWord);
-
-
-    
-    //computer chooses word at randmom from array
-//Main
-//===========================================================
-
-for (var i = 0; i < randWord.length; i++) {
-       
+   for (var i = 0; i < randWord.length; i++){
+      
     underScores.push('_');
 }
-
-//Printing underscores to screen
-    document.getElementById('word-blanks').textContent= underScores.join(' ');{
+    //Printing underscores to screen
+    document.getElementById('word-blanks').textContent = underScores.join(" ");
     console.log(underScores);
-//reset
+    //reset
     wrongLetter = [];
     guessesLeft = 10;
 
-//HTML
-    document.getElementById('guesses-left').textContent= guessesLeft;
+    //HTML
+    document.getElementById('guesses-left').textContent = guessesLeft;
+
+}
+function winLose() {
+    if(winCounter === randWord.length){
+        alert('Winner Winner, Chicken Dinner');
+    }
+    else if(guessesLeft === 0){
+        alert('Loser');
+    }
+}
 // User Guesses 
-}
-function winLose()
-{
-    if()
-}
-
-
 document.onkeyup = function(event) {
 
     userGuesses = event.key;
-//checking if the letter exist insider of the word
+    //checking if the letter exist insider of the word
     if(randWord.indexOf(userGuesses) > -1) {
 
         for(var i = 0; i < randWord.length; i++) {
@@ -61,18 +57,20 @@ document.onkeyup = function(event) {
                 underScores[i] = userGuesses;
                 console.log(underScores);
                 winCounter++;
+                winLose();
             }
         }
     }
-else
+    else
 {
         wrongLetter.push(userGuesses);
         guessesLeft--;
-
-        console.log(guessesLeft);
+        console.log(wrongLetter);
+        winLose();
     }
 }
-
+//Main
+//===========================================================
 startGame();
 //
 console.log(randWord[0]);
