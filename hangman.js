@@ -37,9 +37,12 @@ function startGame(){
 }
 function winLose() {
     if(winCounter === randWord.length){
+        
         alert('Winner Winner, Chicken Dinner');
+        start();
     }
     else if(guessesLeft === 0){
+        
         alert('Loser');
     }
 }
