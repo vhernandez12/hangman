@@ -6,8 +6,11 @@ var wordBank = ['carrie',
              'cujo',
              'shining'];
 var wins = 0;
+var loss = 0;
+var wrongLetter = [];
 var guessesLeft = 9;
 var underScores = [];
+var userGuesses = [];
 var randWord;
 
 
@@ -41,7 +44,7 @@ for (var i = 0; i < randWord.length; i++) {
 }
 function winLose()
 {
-
+    if()
 }
 
 
