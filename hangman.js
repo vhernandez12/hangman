@@ -20,5 +20,9 @@ function startGame(){
     //picks random word
    randWord = wordBank[Math.floor(Math.random() * wordBank.length)];
    console.log('random Word = ' + randWord);
-
+  
+   for (var i = 0; i < randWord.length; i++){
+      
+    underScores.push('_');
+   }
 }
