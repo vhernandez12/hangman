@@ -29,16 +29,18 @@ for (var i = 0; i < randWord.length; i++) {
 }
 
 //Printing underscores to screen
-document.getElementById('word-blanks').textContent= underScores.join(' ');{
-console.log(underScores);
-}
+    document.getElementById('word-blanks').textContent= underScores.join(' ');{
+    console.log(underScores);
 //reset
-wrongLetter = [];
-guessesLeft = 10;
+    wrongLetter = [];
+    guessesLeft = 10;
 
 //HTML
-document.getElementById('guesses-left').textContent= guessesLeft;
+    document.getElementById('guesses-left').textContent= guessesLeft;
 // User Guesses 
+}
+function winLose()
+{
 
 }
 
