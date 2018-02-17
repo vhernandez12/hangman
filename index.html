@@ -6,34 +6,34 @@
     </head>
   
     <body>
-            <div class="row">
-                    <header>
-                        <h1>Hangman-Scary Movies</h1>
-                    </header>
-            </div>
-            <div class="row">
-            <section class="">
-                    <div class = "pressKey">Press Any Key to Get Started!</div>    
-                    <div class = "input"> 
-                            <input id=  type='text' maxlength='1'/>
+                <div id="wrapper">
+                      <h1 class="chrome">HANGMAN</h1>
+                      <h3 class="scary">Scary Movies</h3>
                     </div>
-                    <div class = "wins"> Wins </div>
-                    <div class = "currentWords" >Current Word</div>
-             
-                    <div class = "numberGuesses" >Number of Guesses Remaining</div>
-                    <div class = "letters"> Letters Already Guessed </div>   
-                    
-                    <div class= "guesses-left"> </div>
-
-                    <div class= "word-blanks"> </div>
-                    
-                        
-            </section>
-            
-            </div>
-        
+                
+                    <div id="container">
+                      <h2 id="music"></h2>
+                        <div id="game-section">
+                        <p>Press any key to get started!</p>
+                        <div>
+                          <h3 class="section-title">Wins</h3>
+                          <div id="wins"></div>
+                        </div>
+                        <div id="current-word-section">
+                          <h3 class="section-title">Current Word</h3>
+                          <div id="current-word"></div>
+                        </div>
+                        <div id="guesses-remaining-section">
+                          <h3 class="section-title">Number of Guesses Remaining</h3>
+                          <div id="guesses-remaining"></div>
+                        </div>
+                        <div id="guessed-letters-section">
+                          <h3 class="section-title">Letters Already Guessed</h3>
+                          <div id="guessed-letters"></div>
+                        </div>
+                      </div>
+                    </div>
 
 </body>
-</script src= 'hangman.js'>
-
+<script type="text/javascript" src="hangman.js"></script>
 </html>
