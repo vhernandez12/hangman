@@ -26,7 +26,6 @@ function startGame(){
 for (var i = 0; i < randWord.length; i++) {
        
     underScores.push('_');
-    }
 }
 
 //Printing underscores to screen
@@ -41,21 +40,22 @@ guessesLeft = 10;
 document.getElementById('guesses-left').textContent= guessesLeft;
 // User Guesses 
 
-
+}
 
 
 document.onkeyup = function(event) {
 
-userGuesses = event.key;
+    userGuesses = event.key;
 //checking if the letter exist insider of the word
-if(randWord.indexOf(userGuesses) > -1){
+    if(randWord.indexOf(userGuesses) > -1) {
 
-    for(var i = 0; i < randWord.length; i++) {
+        for(var i = 0; i < randWord.length; i++) {
 
-        if(randWord[i] === userGuesses)  {
+            if(randWord[i] === userGuesses)  {
 
-            underScores[i] = userGuesses;
-            console.log(underScores);
+                underScores[i] = userGuesses;
+                console.log(underScores);
+                winCounter++;
             }
         }
     }
