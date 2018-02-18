@@ -1,16 +1,16 @@
 var hangmanGame = {
     wordsToPick: {
       exorcist: {
-        picture: "",
+        picture: "exorcist.jpg",
       },
       cujo: {
-        picture: "",
+        picture: "cujo.jpg",
       },
       halloween: {
-        picture: "",
+        picture: "Halloween.jpg",
       },
       shining: {
-        picture: "",
+        picture: "shining.jpg",
       },
     },
   
