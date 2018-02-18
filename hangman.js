@@ -137,12 +137,9 @@ var hangmanGame = {
   
         document.querySelector("#band-div").innerHTML =
          "<img class='band-image' src='images/" +
-         this.wordsToPick[this.wordInPlay].picture + "' alt='" +
-         this.wordsToPick[this.wordInPlay].song + "'>";
+         this.wordsToPick[this.wordInPlay].picture + "'>";
   
-        var audio = new Audio(this.wordsToPick[this.wordInPlay].preview);
-        audio.play();
-  
+ 
         return true;
       }
       else {
