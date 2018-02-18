@@ -131,10 +131,7 @@ var hangmanGame = {
   
         this.wins = this.wins + 1;
         document.querySelector("#wins").innerHTML = this.wins;
-  
-        document.querySelector("#music").innerHTML = this.wordsToPick[this.wordInPlay].song +
-        " By " + this.wordInPlay;
-  
+   
         document.querySelector("#band-div").innerHTML =
          "<img class='band-image' src='images/" +
          this.wordsToPick[this.wordInPlay].picture + "'>";
@@ -150,6 +147,7 @@ var hangmanGame = {
   
   hangmanGame.setupGame();
   document.onkeyup = function(event) {
-    hangmanGame.letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
+    hangmanGame.letterGuessed = 
+  String.fromCharCode(event.keyCode).toLowerCase();
     hangmanGame.updatePage(hangmanGame.letterGuessed);
   };
